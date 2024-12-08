@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Product ID: </label>
+    <input type="text" id="pro_id" placeholder="Enter the Product ID"> <br><br>
+
+    <label for="">Product Name: </label>
+    <input type="text" id="pro_name" placeholder="Enter the Product Name"> <br><br>
+
+    <label for="">Category: </label>
+    <select id="pro_category">
+        <option value="seat_accessory">Seat</option>
+        <option value="mats_accessory">Floor</option>
+        <option value="camera_accessory">Camera Accessory</option>
+        <option value="lights">Lights</option>
+        <option value="mirrors">Mirrors</option>
+        <option value="battery">Battery</option>
+        <option value="sunshades">Sunshades</option>
+    </select><br><br>
+
+    <button type="submit" onclick="clearFields()">Submit</button>
+
+    <script>
+        function clearFields() {
+            // Get the input and select elements
+            const productId = document.getElementById('pro_id');
+            const productName = document.getElementById('pro_name');
+            const productCategory = document.getElementById('pro_category');
+
+            // Log the values (optional, to verify submission)
+            console.log("Product ID:", productId.value);
+            console.log("Product Name:", productName.value);
+            console.log("Category:", productCategory.value);
+
+            // Clear the fields
+            productId.value = '';
+            productName.value = '';
+            productCategory.selectedIndex = 0;
+
+            // Show confirmation (optional)
+            alert("Product details submitted and cleared!");
+        }
+    </script>
+</body>
+</html>
